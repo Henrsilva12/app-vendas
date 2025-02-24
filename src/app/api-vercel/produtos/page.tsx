@@ -1,6 +1,6 @@
 export default async function Produtos(){
 
-    const dadosApi = await fetch('https://api.vercel.app/products')
+    const dadosApi = await fetch('./api/produtos');
     const todosProdutos = await dadosApi.json();
 
     return(
