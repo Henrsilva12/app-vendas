@@ -1,4 +1,4 @@
-export default async function Produtos(){
+export default async function clientes(){
 
     const dadosApi = await fetch('./api/clientes');
     const todosClientes = await dadosApi.json();
