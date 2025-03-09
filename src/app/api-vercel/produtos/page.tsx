@@ -1,6 +1,6 @@
 export default async function Produtos(){
 
-    const dadosApi = await fetch('./api/produtos');
+    const dadosApi = await fetch('./api/produto');
     const todosProdutos = await dadosApi.json();
 
     return(
