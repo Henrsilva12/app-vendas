@@ -13,6 +13,17 @@ export async function GET(){
         console.log(error)
         return NextResponse.json({error: error.message})
     }
+}
 
-    
+export async function POST(req){
+    try{
+        const db = await createConnection();
+        const {name, cidade, endereco} =await req.json();
+        const sql = "insert into fornecedores(name, cidade, endereco) values(?, ?, ?)";
+        const [result] = await db.query(sql, [name, cidade, endereco]);
+        return NextResponse.json({id: result.insertId, name, cidade, endereco})
+    } catch(error){
+        console.log(error);
+        return NextResponse.json({error: error.message})
+    }
 }
