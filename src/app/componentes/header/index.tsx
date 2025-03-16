@@ -9,7 +9,7 @@ const Navbar = () => {
         <nav className={styles.navbar}>
             <ul className={styles.navList}>
                 <li className={styles.navItem}>
-                <Link href="/cliente">Clientes</Link>
+                <Link href="/clientes">Clientes</Link>
                 </li>
                 <li className={styles.navItem}>
                 <Link href="/fornecedores">Fornecedor</Link>
@@ -22,6 +22,9 @@ const Navbar = () => {
                 </li>
                 <li className={styles.navItem}>
                 <Link href="/grupo">Dados</Link>
+                </li>
+                <li className={styles.navItem}>
+                <Link href="/local">Local</Link>
                 </li>
             </ul>
         </nav>
