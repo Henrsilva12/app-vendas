@@ -38,12 +38,12 @@ export default function Compra(){
             if (response.ok) {
                 setDataCompra('');
                 setTotal('');
-                alert('Compra finalizada com sucesso');
+                alert('Dados da compra armazenada com sucesso');
                 router.push('/compra'); //
             } else {
                 const errorData = await response.json();
                 console.error('Erro ao inserir ao fazer uma compra:', errorData.error);
-                alert('Erro ao realizar uma compra: ' + errorData.error);
+                alert('Erro no armazamento das informações da compra: ' + errorData.error);
             }
         } catch (error) {
             console.error('Erro na requisição:', error);
@@ -65,10 +65,10 @@ export default function Compra(){
                     <div className={styles.data}>
                         <p>Data da compra</p>
                         <Input
-                            type="text"
+                            type="date"
                             value={dataCompra}
                             onChange={(e) => setDataCompra(e.target.value)}
-                            placeholder="Digite a data da compra"
+                            placeholder=""
                             required
                         />
                     </div>
@@ -85,7 +85,7 @@ export default function Compra(){
                     </div>
 
                     <button type="submit" className={styles.button} disabled={loading}>
-                        {loading ? "Inserindo..." : "Adicionar"}
+                        {loading ? "Adicionado..." : "Adicionar"}
                     </button>
                 </div>
             </form>

@@ -56,7 +56,7 @@ export default function Local(){
         <div className={styles.container}>
             <Navbar />
             <div className={styles.header}>
-                <p className={styles.title}>Local</p>
+                <p className={styles.title}>Local da Compra</p>
             </div>
 
             <form onSubmit={handleSubmit}>
@@ -73,12 +73,12 @@ export default function Local(){
                     </div>
 
                     <div className={styles.descricao}>
-                        <p>Endereco</p>
+                        <p>Endereço</p>
                         <Input
                             type="text"
                             value={descricao}
                             onChange={(e) => setDescricao(e.target.value)}
-                            placeholder="Digite a descricao do local"
+                            placeholder="Digite o endereço do local"
                             required
                         />
                     </div>

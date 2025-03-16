@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 
 export default function Classificacao(){
     const [name, setName] = useState('');
-    const [descricao, setDescricao] = useState('');
+    const [classificacao, setClassificacao] = useState('');
     const [loading, setLoading] = useState(false); // Estado para o spinner
     const router = useRouter();
 
@@ -72,12 +72,12 @@ export default function Classificacao(){
                         />
                     </div>
 
-                    <div className={styles.descricao}>
-                        <p>Descrição</p>
+                    <div className={styles.classificacao}>
+                        <p>Classificacao</p>
                         <Input
                             type="text"
-                            value={descricao}
-                            onChange={(e) => setDescricao(e.target.value)}
+                            value={classificacao}
+                            onChange={(e) => setClassificacao(e.target.value)}
                             placeholder="Digite a classificação do produto"
                             required
                         />

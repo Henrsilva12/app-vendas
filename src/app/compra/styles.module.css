@@ -1,19 +1,27 @@
+.container {
+    background-image: url('/fundo2.png'); /* Caminho da imagem na pasta public */
+    background-size: cover; /* Faz a imagem cobrir todo o espaço */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    min-height: 100vh; /* Garante que o fundo cubra toda a altura da tela */
+    height: 100%;
+    width: 100%;
+}
 .title {
     background-color: #000000;
-    height: 100px;
+    height: 80px;
     width: 100%;
     font-weight: bold;
     color: #ffffff;
     text-align: center;
-    padding-top: 40px;
+    padding-top: 25px;
     font-size: 30px;
+    margin-bottom: 70px;
 }
-
 .header{
     display: flex;
     align-items: center;
 }
-
 .formularios {
     padding: 30px;
     padding-left: 5px;
@@ -55,7 +63,7 @@
     margin-left: 50px;
 }
 .button {
-    background-color: #8400ff;
+    background-color: #2200ff;
     border-radius: 5px;
     border: 2px solid #8400ff;
     font-size: 16px;
@@ -66,7 +74,17 @@
 }
 
 .button:hover{
-    background-color: #6a00cc;
+    background-color: #000155;
+}
+
+.data input {
+    width: 200px;
+    height: 50px; 
+    align-items: center;
+    display: flex;
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
 }
 
 /* Estilos responsivos para telas menores */

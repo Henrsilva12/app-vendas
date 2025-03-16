@@ -55,52 +55,52 @@ export default function Cliente() {
     };
 
     return (
-        <div className={styles.container}>
-            <Navbar />
-            <div className={styles.header}>
-                <p className={styles.title}>Cadastro de Clientes</p>
-            </div>
-
-            <form onSubmit={handleSubmit}>
-                <div className={styles.formularios}>
-                    <div className={styles.name}>
-                        <p>Nome</p>
-                        <Input
-                            type="text"
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}
-                            placeholder="Digite o nome"
-                            required
-                        />
-                    </div>
-
-                    <div className={styles.cidade}>
-                        <p>Cidade</p>
-                        <Input
-                            type="text"
-                            value={cidade}
-                            onChange={(e) => setCidade(e.target.value)}
-                            placeholder="Digite a cidade"
-                            required
-                        />
-                    </div>
-
-                    <div className={styles.endereco}>
-                        <p>Endereço</p>
-                        <Input
-                            type="text"
-                            value={endereco}
-                            onChange={(e) => setEndereco(e.target.value)}
-                            placeholder="Digite o endereço"
-                            required
-                        />
-                    </div>
-
-                    <button type="submit" className={styles.button} disabled={loading}>
-                        {loading ? "Cadastrando..." : "Cadastrar"}
-                    </button>
+            <div className={styles.container}>
+                <Navbar />
+                <div className={styles.header}>
+                    <p className={styles.title}>Cadastro de Clientes</p>
                 </div>
-            </form>
-        </div>
+
+                <form onSubmit={handleSubmit}>
+                    <div className={styles.formularios}>
+                        <div className={styles.name}>
+                            <p>Nome</p>
+                            <Input
+                                type="text"
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
+                                placeholder="Digite o nome"
+                                required
+                            />
+                        </div>
+
+                        <div className={styles.cidade}>
+                            <p>Cidade</p>
+                            <Input
+                                type="text"
+                                value={cidade}
+                                onChange={(e) => setCidade(e.target.value)}
+                                placeholder="Digite a cidade"
+                                required
+                            />
+                        </div>
+
+                        <div className={styles.endereco}>
+                            <p>Endereço</p>
+                            <Input
+                                type="text"
+                                value={endereco}
+                                onChange={(e) => setEndereco(e.target.value)}
+                                placeholder="Digite o endereço"
+                                required
+                            />
+                        </div>
+
+                        <button type="submit" className={styles.button} disabled={loading}>
+                            {loading ? "Cadastrando..." : "Cadastrar"}
+                        </button>
+                    </div>
+                </form>
+            </div>
     );
 }
