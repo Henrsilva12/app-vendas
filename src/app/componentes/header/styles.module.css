@@ -23,6 +23,44 @@
 }
 
 .navItem a:hover {
-    color: #f0f0f0;
+    color: #00d9ff;
     text-decoration: none;
+}
+
+/* Estilos para o botão do menu */
+.menuButton {
+    display: none;
+    background-color: #2140eb;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+}
+
+/* Estilos para telas menores (responsivo) */
+@media (max-width: 768px) {
+    .menuButton {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navList {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navList.open {
+        display: flex;
+    }
+
+    .navItem {
+        margin: 0.5rem 0;
+    }
+
+    .navItem a {
+        font-size: 1rem;
+    }
 }

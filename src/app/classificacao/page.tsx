@@ -12,11 +12,11 @@ export default function Classificacao(){
     const [loading, setLoading] = useState(false); // Estado para o spinner
     const router = useRouter();
 
-    const handleSubmit = async (event) => {
+    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
         // Validação dos campos
-        if (!name || !descricao) {
+        if (!name || !classificacao) {
             alert('Por favor, preencha todos os campos.');
             return;
         }
@@ -30,13 +30,13 @@ export default function Classificacao(){
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ name, descricao }),
+                body: JSON.stringify({ name, classificacao }),
             });
 
             // Verifica se a requisição foi bem-sucedida
             if (response.ok) {
                 setName('');
-                setDescricao('');
+                setClassificacao('');
                 alert('Classificação inserida com sucesso');
                 router.push('/classificacao'); //
             } else {

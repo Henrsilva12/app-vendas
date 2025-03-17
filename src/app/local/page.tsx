@@ -12,7 +12,7 @@ export default function Local(){
     const [loading, setLoading] = useState(false); // Estado para o spinner
     const router = useRouter();
 
-    const handleSubmit = async (event) => {
+    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
         // Validação dos campos
