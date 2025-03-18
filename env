@@ -1,0 +1,6 @@
+# .env.example
+MYSQL_HOST=localhost
+MYSQL_USER=seu_usuario
+MYSQL_PASSWORD=sua_senha
+MYSQL_NAME=nome_do_banco
+MYSQL_PORT=3306
